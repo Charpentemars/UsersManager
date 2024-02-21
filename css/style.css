@@ -5,3 +5,10 @@
     width: 24px;
     height: 24px;
 }
+
+.grid_header {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+}
