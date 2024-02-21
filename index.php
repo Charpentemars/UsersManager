@@ -21,7 +21,7 @@ $users = $statement->fetchAll(PDO::FETCH_ASSOC);
 <div class="container">
     <h1>Gestion des utilisateurs</h1>
     <div class="grid_header">
-        <a class="icon-wrapper" href="create.php" data-tooltip="Ajouter un utilisateur"><i class="gg-add"></i></a>
+        <a class="icon-wrapper" href="create.php" data-tooltip="Ajouter un utilisateur (Soon)"><i class="gg-add"></i></a>
         <a class="icon-wrapper" href="https://www.google.com/" data-tooltip="Quitter le gestionnaire"><i class="gg-close-o"></i></a>
     </div>
     <br>
@@ -47,8 +47,8 @@ $users = $statement->fetchAll(PDO::FETCH_ASSOC);
             <td>
                 <div class="grid">
                     <a class="icon-wrapper" data-tooltip="Visualiser cette utilisateur" href="read.php?id=<?php echo $user['id'] ?>"> <i class="gg-search"></i></a>
-                    <a class="icon-wrapper" data-tooltip="Modifier cette utilisateur" href="update.php?id=<?php echo $user['id'] ?>"> <i class="gg-pen"></i></a>
-                    <a class="icon-wrapper" data-tooltip="Supprimer cette utilisateur" href="delete.php?id=<?php echo $user['id'] ?>"> <i class="gg-trash"></i></a>
+                    <a class="icon-wrapper" data-tooltip="Modifier cette utilisateur (Soon)" href="update.php?id=<?php echo $user['id'] ?>"> <i class="gg-pen"></i></a>
+                    <a class="icon-wrapper" data-tooltip="Supprimer cette utilisateur (Soon)" href="delete.php?id=<?php echo $user['id'] ?>"> <i class="gg-trash"></i></a>
                 </div>
 
             </td>
