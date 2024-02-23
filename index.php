@@ -1,5 +1,5 @@
 <?php
-
+global $db;
 require 'database.php';
 
 $SQL = "SELECT * FROM user";
@@ -48,7 +48,7 @@ $users = $statement->fetchAll(PDO::FETCH_ASSOC);
                 <div class="grid">
                     <a class="icon-wrapper" data-tooltip="Visualiser cette utilisateur" href="read.php?id=<?php echo $user['id'] ?>"> <i class="gg-search"></i></a>
                     <a class="icon-wrapper" data-tooltip="Modifier cette utilisateur (Soon)" href="update.php?id=<?php echo $user['id'] ?>"> <i class="gg-pen"></i></a>
-                    <a class="icon-wrapper" data-tooltip="Supprimer cette utilisateur (Soon)" href="delete.php?id=<?php echo $user['id'] ?>"> <i class="gg-trash"></i></a>
+                    <a class="icon-wrapper" data-tooltip="Supprimer cette utilisateur" data-target="modal-delete" data-id="<?php echo $user['id']; ?>" onclick="toggleModal(event, <?php echo $user['id']; ?>)"> <i class="gg-trash"></i></a>
                 </div>
 
             </td>
@@ -60,5 +60,26 @@ $users = $statement->fetchAll(PDO::FETCH_ASSOC);
         </tbody>
     </table>
 </div>
+<dialog id="modal-delete">
+    <article>
+        <header>
+            <button
+                    aria-label="Close"
+                    rel="prev"
+                    data-target="modal-delete"
+                    onclick="toggleModal(event)"
+            ></button>
+            <h3>Suppression de l'utilisateur</h3>
+        </header>
+        <p>
+            Êtes-vous sûr de vouloir supprimer cette utilisateur ?<br>Cette action est irréversible.
+        </p>
+        <footer>
+            <button role="button" class="secondary" data-target="modal-delete" onclick="toggleModal(event)">Annuler</button>
+            <a href="delete.php?id=<?php echo $user['id'] ?>" role="button" class="primary">Supprimer</a>
+        </footer>
+    </article>
+</dialog>
+<script src="js/modal.js"></script>
 </body>
 </html>
