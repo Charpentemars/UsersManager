@@ -13,4 +13,4 @@ user@myComputer ~ % git clone https://github.com/Charpentemars/UsersManager.git
 - [ ] Create (ToDo)
 - [x] Read
 - [ ] Update (ToDo)
-- [ ] Remove (ToDo
+- [x] Remove
