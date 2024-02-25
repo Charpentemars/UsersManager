@@ -21,7 +21,7 @@ $users = $statement->fetchAll(PDO::FETCH_ASSOC);
 <div class="container">
     <h1>Gestion des utilisateurs</h1>
     <div class="grid_header">
-        <a class="icon-wrapper" href="create.php" data-tooltip="Ajouter un utilisateur (Soon)"><i class="gg-add"></i></a>
+        <a class="icon-wrapper" href="create.php" data-tooltip="Ajouter un utilisateur"><i class="gg-add"></i></a>
         <a class="icon-wrapper" href="https://www.google.com/" data-tooltip="Quitter le gestionnaire"><i class="gg-close-o"></i></a>
     </div>
     <br>

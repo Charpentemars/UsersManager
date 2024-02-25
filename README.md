@@ -10,7 +10,8 @@ user@myComputer ~ % git clone https://github.com/Charpentemars/UsersManager.git
 
 ## Features
 - [x] Simple Dashboard (thanks to PicoCSS)
-- [ ] Create (ToDo)
+- [x] Create
+  - ToDo: Add security to avoid an SQL error if the email already exists
 - [x] Read
 - [ ] Update (ToDo)
 - [ ] Remove (ToDo
